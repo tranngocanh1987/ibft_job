@@ -4,13 +4,16 @@ import java.io.File;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import lombok.Data;
 
 @Data
-public class FileModel {
+@Component
+public abstract class FileModel {
 	private File fileInfo;
 	private String fileType;
-	private Date createdDate;
+	private Date receivedDate;
 	private List<String> contents;
 	
 	public FileModel() {
@@ -21,10 +24,10 @@ public class FileModel {
 		this.fileInfo = fileInfo;
 	}
 	
-	public FileModel(File fileInfo, String fileType, Date createDate, List<String> contents) {
+	public FileModel(File fileInfo, String fileType, Date receivedDate, List<String> contents) {
 		this.fileInfo = fileInfo;
 		this.fileType = fileType;
-		this.createdDate = createDate;
+		this.receivedDate = receivedDate;
 		this.contents = contents;
 	}
 }

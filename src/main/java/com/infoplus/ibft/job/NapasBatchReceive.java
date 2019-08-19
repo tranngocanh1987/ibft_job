@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import com.infoplus.ibft.service.NapasReconciliationService;
 
 @Component
-public class NapasBatchReceive implements ScheduledTasks {
+public class NapasBatchReceive extends ScheduledTasks {
 	
 	
 	@Autowired
@@ -20,7 +20,7 @@ public class NapasBatchReceive implements ScheduledTasks {
 	public void scheduleFixedRateTask() {
 		logger.info("Call receiving data function from NAPAS :: Execution Time - {}",
 				dateTimeFormatter.format(LocalDateTime.now()));
-		service.readNapsReconciliationFiles();
+		service.readNapasReconciliationFiles();
 	}
 
 	@Scheduled(cron = "20 55 17 * * *")
@@ -29,7 +29,7 @@ public class NapasBatchReceive implements ScheduledTasks {
 				dateTimeFormatter.format(LocalDateTime.now()));
 		
 		//NapasReconciliationService service = new NapasReconciliationService();
-		service.readNapsReconciliationFiles();
+		service.readNapasReconciliationFiles();
 	}
 
 }

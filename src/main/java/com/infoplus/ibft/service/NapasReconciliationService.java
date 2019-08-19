@@ -4,18 +4,17 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.infoplus.ibft.model.FileModel;
+import com.infoplus.ibft.model.NapasFileModel;
 import com.infoplus.ibft.rabbitmq.Publisher;
 
 @Service
-public class NapasReconciliationService {
-	final Logger logger = LoggerFactory.getLogger(NapasReconciliationService.class);
+public class NapasReconciliationService extends BaseService {
+	
 
 	@Value("${file.inputDir}")
 	private String inputDir;
@@ -30,17 +29,17 @@ public class NapasReconciliationService {
 	Publisher publisher;
 	
 	@Autowired
-	FileHandler fileHandler;
+	NapasFileHandler fileHandler;
 
-	public void readNapsReconciliationFiles() {
+	public void readNapasReconciliationFiles() {
 		List<File> inputFiles = new ArrayList<File>();
 		List<FileModel> lstFileModel = new ArrayList<FileModel>();
-		FileModel fileModel;
+		NapasFileModel fileModel;
 
 		try {
 			// check file in inputDir
 			if (fileHandler.isEmptyDirectory(inputDir))
-				logger.debug("Khong tim thay file");
+				logger.debug("No files found");
 			else {
 				inputFiles = fileHandler.getFilesFromDirectory(inputDir);
 
@@ -58,9 +57,6 @@ public class NapasReconciliationService {
 
 						lstFileModel.add(fileModel);
 					}
-
-					// send to RabbitMQ
-					publisher.produceMsg("Test");
 				}
 			}
 		} catch (Exception ex) {

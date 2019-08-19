@@ -2,11 +2,10 @@ package com.infoplus.ibft.job;
 
 import java.time.format.DateTimeFormatter;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public interface ScheduledTasks {
-	 final Logger logger = LoggerFactory.getLogger(ScheduledTasks.class);
+public abstract class ScheduledTasks {
+	 final Logger logger = LogManager.getLogger(this.getClass());
 	 final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-
 }

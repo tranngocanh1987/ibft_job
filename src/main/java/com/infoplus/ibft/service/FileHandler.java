@@ -1,20 +1,21 @@
 package com.infoplus.ibft.service;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.infoplus.ibft.common.AppConst;
 import com.infoplus.ibft.model.FileModel;
 
 @Service
-public class FileHandler {
+public class FileHandler extends BaseService{
+	
+	@Autowired
+	FileModel model;
 	
 	public boolean isEmptyDirectory(String directory) {
 		if (directory.isEmpty())
@@ -23,7 +24,7 @@ public class FileHandler {
 		File dir = new File(directory);
 		File[] dirContents = dir.listFiles();
 
-		if (dirContents != null && dirContents.length > 0) {
+		if (dirContents != null && dirContents.length > 1) {
 			return false;
 		}
 		return true;
@@ -43,31 +44,24 @@ public class FileHandler {
 		return files;
 	}
 
-	public FileModel readFile(String fileDir) {
-		FileModel model = new FileModel();
-		List<String> records = new ArrayList<String>();
-
-		try {
-			model.setFileInfo(new File(fileDir));
-
-			model.setCreatedDate(new Date());
-
-			BufferedReader reader = new BufferedReader(new FileReader(fileDir));
-			String line;
-			while ((line = reader.readLine()) != null) {
-				records.add(line);
-			}
-			model.setContents(records);
-
-			reader.close();
-
-		} catch (Exception ex) {
-			System.err.format("Exception occurred trying to read '%s'.", fileDir);
-			ex.printStackTrace();
-			return null;
-		}
-		return model;
-	}
+	/*
+	 * public FileModel readFile(String fileDir) { List<String> records = new
+	 * ArrayList<String>();
+	 * 
+	 * try { model.setFileInfo(new File(fileDir));
+	 * 
+	 * model.setReceivedDate(new Date());
+	 * 
+	 * BufferedReader reader = new BufferedReader(new FileReader(fileDir)); String
+	 * line; while ((line = reader.readLine()) != null) { records.add(line); }
+	 * model.setContents(records);
+	 * 
+	 * reader.close();
+	 * 
+	 * } catch (Exception ex) {
+	 * System.err.format("Exception occurred trying to read '%s'.", fileDir);
+	 * ex.printStackTrace(); return null; } return model; }
+	 */
 
 	public void writeFile(FileModel model, String outFileName) {
 		try {
@@ -87,7 +81,9 @@ public class FileHandler {
 
 	public void moveFile(String oldDir, String newDir) {
 		File file = new File(oldDir);
-
+		File newFile = new File(newDir);
+		newFile.delete();
+		
 		// renaming the file and moving it to a new location
 		if (file.renameTo(new File(newDir))) {
 			// if file copied successfully then delete the original file
