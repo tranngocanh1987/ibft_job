@@ -11,7 +11,7 @@ import com.infoplus.ibft.entity.NapasReconciliationTransTemp;
 @Transactional
 public interface NapasRccTransTempReps extends JpaRepository<NapasReconciliationTransTemp, Long>{
 	
-	@Procedure(name = "procCompareNapasTrans")
-	Integer exeCompareNapasTrans(@Param("p_transDate") String transDate);
+	@Procedure(name = "procNapasTransCompare")
+	Integer exeCompareNapasTrans(@Param("p_fromDate") String fromDate, @Param("p_toDate") String toDate);
 	
 }

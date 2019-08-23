@@ -1,31 +1,25 @@
 package com.infoplus.ibft.model;
 
-import java.io.File;
 import java.util.Date;
 import java.util.List;
-
-import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
 @Data
-@Component
-public abstract class FileModel {
-	private File fileInfo;
+public class FileModel {
 	private String fileType;
 	private Date receivedDate;
 	private List<String> contents;
+	
+	private NapasFileNameModel napasFileName;
 	
 	public FileModel() {
 		super();
 	}
 	
-	public FileModel(File fileInfo) {
-		this.fileInfo = fileInfo;
-	}
 	
-	public FileModel(File fileInfo, String fileType, Date receivedDate, List<String> contents) {
-		this.fileInfo = fileInfo;
+	public FileModel(NapasFileNameModel napasFileName, String fileType, Date receivedDate, List<String> contents) {
+		this.napasFileName = napasFileName;
 		this.fileType = fileType;
 		this.receivedDate = receivedDate;
 		this.contents = contents;

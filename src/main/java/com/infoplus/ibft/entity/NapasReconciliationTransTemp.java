@@ -13,17 +13,20 @@ import javax.persistence.ParameterMode;
 import javax.persistence.StoredProcedureParameter;
 import javax.persistence.Table;
 
+import org.apache.commons.lang.StringUtils;
+
+import com.infoplus.ibft.model.NapasFileTransModel;
+
 import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "napas_reconciliation_trans_temp")
+@Table(name = "napas_rcc_trans_temp")
 @NamedStoredProcedureQueries({
-		@NamedStoredProcedureQuery(name = "procCompareNapasTrans", procedureName = "proc_compare_napas_trans", parameters = {
-				@StoredProcedureParameter(mode = ParameterMode.IN, name = "p_transDate", type = String.class),
-				@StoredProcedureParameter(mode = ParameterMode.OUT, name = "p_countMissedTrans", type = Integer.class)
-		})
-})
+		@NamedStoredProcedureQuery(name = "procNapasTransCompare", procedureName = "proc_napas_trans_compare", parameters = {
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "p_fromDate", type = String.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "p_toDate", type = String.class),
+				@StoredProcedureParameter(mode = ParameterMode.OUT, name = "p_countMissedTrans", type = Integer.class) }) })
 public class NapasReconciliationTransTemp implements Serializable {
 	/**
 	 * 
@@ -178,4 +181,107 @@ public class NapasReconciliationTransTemp implements Serializable {
 
 	@Column(name = "csr_mapped")
 	private boolean cSR_Mapped;
+
+	public NapasReconciliationTransTemp() {
+		super();
+	}
+
+	public NapasReconciliationTransTemp(NapasFileTransModel model) {
+		this.mTI_Msg_Type_Id = StringUtils.isEmpty(model.getMTI_Msg_Type_Id()) ? StringUtils.EMPTY
+				: model.getMTI_Msg_Type_Id().trim();
+
+		this.aCQ_Acq_Ins_Code = StringUtils.isEmpty(model.getACQ_Acq_Ins_Code()) ? StringUtils.EMPTY
+				: model.getACQ_Acq_Ins_Code().trim();
+		this.bNB_Benf_Ind_Code = StringUtils.isEmpty(model.getBNB_Benf_Ind_Code()) ? StringUtils.EMPTY
+				: model.getBNB_Benf_Ind_Code().trim();
+		this.f102_Source_Acct_No = StringUtils.isEmpty(model.getF102_Source_Acct_No()) ? StringUtils.EMPTY
+				: model.getF102_Source_Acct_No().trim();
+		this.f10_Card_Billing_Conv_Rate = StringUtils.isEmpty(model.getF10_Card_Billing_Conv_Rate()) ? StringUtils.EMPTY
+				: model.getF10_Card_Billing_Conv_Rate().trim();
+		this.f11_Sys_Trace_Audit_No = StringUtils.isEmpty(model.getF11_Sys_Trace_Audit_No()) ? StringUtils.EMPTY
+				: model.getF11_Sys_Trace_Audit_No().trim();
+		this.f12_Local_Trans_Time = StringUtils.isEmpty(model.getF12_Local_Trans_Time()) ? StringUtils.EMPTY
+				: model.getF12_Local_Trans_Time().trim();
+		this.f13_Local_Trans_Date = StringUtils.isEmpty(model.getF13_Local_Trans_Date()) ? StringUtils.EMPTY
+				: model.getF13_Local_Trans_Date().trim();
+		this.f15_Settlement_Date = StringUtils.isEmpty(model.getF15_Settlement_Date()) ? StringUtils.EMPTY
+				: model.getF15_Settlement_Date().trim();
+		this.f18_Merchant_Cat_Code = StringUtils.isEmpty(model.getF18_Merchant_Cat_Code()) ? StringUtils.EMPTY
+				: model.getF18_Merchant_Cat_Code().trim();
+
+		this.f22_Point_Ser_Entry_Mode = StringUtils.isEmpty(model.getF22_Point_Ser_Entry_Mode()) ? StringUtils.EMPTY
+				: model.getF22_Point_Ser_Entry_Mode().trim();
+		this.f25_Point_Ser_Condition_Code = StringUtils.isEmpty(model.getF25_Point_Ser_Condition_Code())
+				? StringUtils.EMPTY
+				: model.getF25_Point_Ser_Condition_Code().trim();
+		this.f2_Pr_Account_No = StringUtils.isEmpty(model.getF2_Pr_Account_No()) ? StringUtils.EMPTY
+				: model.getF2_Pr_Account_No().trim();
+		this.f37_Retriev_Ref_No = StringUtils.isEmpty(model.getF37_Retriev_Ref_No()) ? StringUtils.EMPTY
+				: model.getF37_Retriev_Ref_No().trim();
+		this.f38_Auth_Ind_Response = StringUtils.isEmpty(model.getF38_Auth_Ind_Response()) ? StringUtils.EMPTY
+				: model.getF38_Auth_Ind_Response().trim();
+		this.f3_Process_Code = StringUtils.isEmpty(model.getF3_Process_Code()) ? StringUtils.EMPTY
+				: model.getF3_Process_Code().trim();
+		this.f41_Card_Acpt_Ter_Ind = StringUtils.isEmpty(model.getF41_Card_Acpt_Ter_Ind()) ? StringUtils.EMPTY
+				: model.getF41_Card_Acpt_Ter_Ind().trim();
+		this.f49_Currency_Code = StringUtils.isEmpty(model.getF49_Currency_Code()) ? StringUtils.EMPTY
+				: model.getF49_Currency_Code().trim();
+		this.f4_Trans_Amount = StringUtils.isEmpty(model.getF4_Trans_Amount()) ? StringUtils.EMPTY
+				: model.getF4_Trans_Amount().trim();
+		this.f50_Settlement_Curr_Code = StringUtils.isEmpty(model.getF50_Settlement_Curr_Code()) ? StringUtils.EMPTY
+				: model.getF50_Settlement_Curr_Code().trim();
+		this.f51_Card_Billing_Curr_Code = StringUtils.isEmpty(model.getF51_Card_Billing_Curr_Code()) ? StringUtils.EMPTY
+				: model.getF51_Card_Billing_Curr_Code().trim();
+		this.f5_Settement_Amount = StringUtils.isEmpty(model.getF5_Settement_Amount()) ? StringUtils.EMPTY
+				: model.getF5_Settement_Amount().trim();
+		this.f6_Billing_Amount = StringUtils.isEmpty(model.getF6_Billing_Amount()) ? StringUtils.EMPTY
+				: model.getF6_Billing_Amount().trim();
+		this.f9_Settlement_Ex_Rate = StringUtils.isEmpty(model.getF9_Settlement_Ex_Rate()) ? StringUtils.EMPTY
+				: model.getF9_Settlement_Ex_Rate().trim();
+
+		this.iRFACQBNB_ACQ_Fee = StringUtils.isEmpty(model.getIRFACQBNB_ACQ_Fee()) ? StringUtils.EMPTY
+				: model.getIRFACQBNB_ACQ_Fee().trim();
+		this.iRFACQISS_ACQ_Fee = StringUtils.isEmpty(model.getIRFACQISS_ACQ_Fee()) ? StringUtils.EMPTY
+				: model.getIRFACQISS_ACQ_Fee().trim();
+		this.iRFBNBACQ_BNB_Fee = StringUtils.isEmpty(model.getIRFBNBACQ_BNB_Fee()) ? StringUtils.EMPTY
+				: model.getIRFBNBACQ_BNB_Fee().trim();
+		this.iRFBNBISS_BNB_Fee = StringUtils.isEmpty(model.getIRFBNBISS_BNB_Fee()) ? StringUtils.EMPTY
+				: model.getIRFBNBISS_BNB_Fee().trim();
+		this.iRFISSACQ_Iss_Fee = StringUtils.isEmpty(model.getIRFISSACQ_Iss_Fee()) ? StringUtils.EMPTY
+				: model.getIRFISSACQ_Iss_Fee().trim();
+		this.iRFISSBNB_Iss_Fee = StringUtils.isEmpty(model.getIRFISSBNB_Iss_Fee()) ? StringUtils.EMPTY
+				: model.getIRFISSBNB_Iss_Fee().trim();
+		this.iSS_Iss_Ind_Code = StringUtils.isEmpty(model.getISS_Iss_Ind_Code()) ? StringUtils.EMPTY
+				: model.getISS_Iss_Ind_Code().trim();
+		this.mID_Card_Acpt_Ind_Code = StringUtils.isEmpty(model.getMID_Card_Acpt_Ind_Code()) ? StringUtils.EMPTY
+				: model.getMID_Card_Acpt_Ind_Code().trim();
+		this.mTI_Msg_Type_Id = StringUtils.isEmpty(model.getMTI_Msg_Type_Id()) ? StringUtils.EMPTY
+				: model.getMTI_Msg_Type_Id().trim();
+		this.rCA_Real_Card_Amount = StringUtils.isEmpty(model.getRCA_Real_Card_Amount()) ? StringUtils.EMPTY
+				: model.getRCA_Real_Card_Amount().trim();
+		this.rRC_Reconcil_Resp_Code = StringUtils.isEmpty(model.getRRC_Reconcil_Resp_Code()) ? StringUtils.EMPTY
+				: model.getRRC_Reconcil_Resp_Code().trim();
+		this.rSV1_Reserve_Info_1 = StringUtils.isEmpty(model.getRSV1_Reserve_Info_1()) ? StringUtils.EMPTY
+				: model.getRSV1_Reserve_Info_1().trim();
+		this.rSV2_Reserve_Info_2 = StringUtils.isEmpty(model.getRSV2_Reserve_Info_2()) ? StringUtils.EMPTY
+				: model.getRSV2_Reserve_Info_2().trim();
+		this.rSV3_Reseve_Info_3 = StringUtils.isEmpty(model.getRSV3_Reseve_Info_3()) ? StringUtils.EMPTY
+				: model.getRSV3_Reseve_Info_3().trim();
+		this.rTA_Real_Trans_Amount = StringUtils.isEmpty(model.getRTA_Real_Trans_Amount()) ? StringUtils.EMPTY
+				: model.getRTA_Real_Trans_Amount().trim();
+		this.sVC_Service_Code = StringUtils.isEmpty(model.getSVC_Service_Code()) ? StringUtils.EMPTY
+				: model.getSVC_Service_Code().trim();
+		this.sVFACQNP_ACQ_Fee = StringUtils.isEmpty(model.getSVFACQNP_ACQ_Fee()) ? StringUtils.EMPTY
+				: model.getSVFACQNP_ACQ_Fee().trim();
+		this.sVFBNBNP_BNB_Fee = StringUtils.isEmpty(model.getSVFBNBNP_BNB_Fee()) ? StringUtils.EMPTY
+				: model.getSVFBNBNP_BNB_Fee().trim();
+		this.sVFISSNP_Iss_Fee = StringUtils.isEmpty(model.getSVFISSNP_Iss_Fee()) ? StringUtils.EMPTY
+				: model.getSVFISSNP_Iss_Fee().trim();
+		this.tCC_Trans_Channel_Code = StringUtils.isEmpty(model.getTCC_Trans_Channel_Code()) ? StringUtils.EMPTY
+				: model.getTCC_Trans_Channel_Code().trim();
+		this.tRN_Trans_Ref_No = StringUtils.isEmpty(model.getTRN_Trans_Ref_No()) ? StringUtils.EMPTY
+				: model.getTRN_Trans_Ref_No().trim();
+		this.cSR_CheckSum = StringUtils.isEmpty(model.getCSR_CheckSum()) ? StringUtils.EMPTY
+				: model.getCSR_CheckSum().trim();
+	}
 }
