@@ -13,6 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ibft_jobs</name>
 	<description>IBFT project for Spring Boot</description>
+	<!-- <packaging>war</packaging> -->
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -87,7 +88,7 @@
 	    <dependency>
 			<groupId>org.mariadb.jdbc</groupId>
 			<artifactId>mariadb-java-client</artifactId>
-			<version>1.1.9</version>
+			<!-- <version>1.1.9</version> -->
 		</dependency>
     
     	<dependency>
@@ -111,9 +112,16 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
 		</dependency>
+		
+		<!-- <dependency>
+		   <groupId>org.springframework.boot</groupId>
+		   <artifactId>spring-boot-starter-tomcat</artifactId>
+		   <scope>provided</scope>
+		</dependency> -->
 	</dependencies>
 
 	<build>
+		<finalName>jbft_jobs</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

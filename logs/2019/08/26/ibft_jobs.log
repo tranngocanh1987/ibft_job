@@ -1,0 +1,104 @@
+[INFO ] 2019-08-26 11:10:45.028 [main] IbftJobsApplication - Starting IbftJobsApplication on DESKTOP-17D4O1S with PID 15032 (E:\Workspaces\ibft_jobs\target\classes started by Admin in E:\Workspaces\ibft_jobs)
+[DEBUG] 2019-08-26 11:10:45.034 [main] IbftJobsApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+[INFO ] 2019-08-26 11:10:45.035 [main] IbftJobsApplication - No active profile set, falling back to default profiles: default
+[DEBUG] 2019-08-26 11:10:48.337 [main] JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+[INFO ] 2019-08-26 11:10:52.430 [my-scheduled-task-pool-2] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:10:52
+[INFO ] 2019-08-26 11:10:52.430 [my-scheduled-task-pool-2] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:10:52.429 [my-scheduled-task-pool-1] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:10:52
+[INFO ] 2019-08-26 11:10:52.430 [my-scheduled-task-pool-2] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:10:52.454 [main] IbftJobsApplication - Started IbftJobsApplication in 7.861 seconds (JVM running for 9.572)
+[INFO ] 2019-08-26 11:11:05.601 [main] IbftJobsApplication - Starting IbftJobsApplication on DESKTOP-17D4O1S with PID 35872 (E:\Workspaces\ibft_jobs\target\classes started by Admin in E:\Workspaces\ibft_jobs)
+[DEBUG] 2019-08-26 11:11:05.608 [main] IbftJobsApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+[INFO ] 2019-08-26 11:11:05.608 [main] IbftJobsApplication - No active profile set, falling back to default profiles: default
+[DEBUG] 2019-08-26 11:11:07.602 [main] JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+[INFO ] 2019-08-26 11:11:11.191 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:11:11
+[INFO ] 2019-08-26 11:11:11.191 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:11:11
+[INFO ] 2019-08-26 11:11:11.192 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:11:11.192 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:11:11.217 [main] IbftJobsApplication - Started IbftJobsApplication in 5.968 seconds (JVM running for 7.661)
+[INFO ] 2019-08-26 11:11:21.194 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:11:21
+[INFO ] 2019-08-26 11:11:21.194 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:11:21.194 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:11:21.194 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:11:21
+[INFO ] 2019-08-26 11:11:31.195 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:11:31
+[INFO ] 2019-08-26 11:11:31.195 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:11:31
+[INFO ] 2019-08-26 11:11:31.195 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:11:31.195 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:11:41.197 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:11:41
+[INFO ] 2019-08-26 11:11:41.197 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:11:41
+[INFO ] 2019-08-26 11:11:41.197 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:11:41.197 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:11:51.198 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:11:51
+[INFO ] 2019-08-26 11:11:51.198 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:11:51
+[INFO ] 2019-08-26 11:11:51.198 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:11:51.198 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:12:01.199 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:12:01
+[INFO ] 2019-08-26 11:12:01.199 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:12:01
+[INFO ] 2019-08-26 11:12:01.199 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:12:01.199 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:19:35.402 [main] IbftJobsApplication - Starting IbftJobsApplication on DESKTOP-17D4O1S with PID 34140 (E:\Workspaces\ibft_jobs\target\classes started by Admin in E:\Workspaces\ibft_jobs)
+[DEBUG] 2019-08-26 11:19:35.409 [main] IbftJobsApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+[INFO ] 2019-08-26 11:19:35.410 [main] IbftJobsApplication - No active profile set, falling back to default profiles: default
+[DEBUG] 2019-08-26 11:19:37.289 [main] JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+[INFO ] 2019-08-26 11:19:40.620 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:19:40
+[INFO ] 2019-08-26 11:19:40.620 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:19:40.620 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:19:40.620 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:19:40
+[INFO ] 2019-08-26 11:19:40.649 [main] IbftJobsApplication - Started IbftJobsApplication in 5.574 seconds (JVM running for 7.184)
+[WARN ] 2019-08-26 11:19:48.916 [http-nio-8080-exec-2] JwtRequestFilter - JWT Token does not begin with Bearer String
+[INFO ] 2019-08-26 11:19:50.622 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:19:50
+[INFO ] 2019-08-26 11:19:50.622 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:19:50
+[INFO ] 2019-08-26 11:19:50.622 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:19:50.622 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:20:00.623 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:20:00
+[INFO ] 2019-08-26 11:20:00.623 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:20:00
+[INFO ] 2019-08-26 11:20:00.623 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:20:00.623 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:20:10.624 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:20:10
+[INFO ] 2019-08-26 11:20:10.624 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:20:10
+[INFO ] 2019-08-26 11:20:10.624 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:20:10.624 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:20:20.626 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:20:20
+[INFO ] 2019-08-26 11:20:20.626 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:20:20
+[INFO ] 2019-08-26 11:20:20.626 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:20:20.626 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:20:30.627 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:20:30
+[INFO ] 2019-08-26 11:20:30.627 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:20:30
+[INFO ] 2019-08-26 11:20:30.627 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:20:30.627 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:20:40.628 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:20:40
+[INFO ] 2019-08-26 11:20:40.628 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:20:40
+[INFO ] 2019-08-26 11:20:40.628 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:20:40.628 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:20:50.630 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:20:50
+[INFO ] 2019-08-26 11:20:50.630 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:20:50
+[INFO ] 2019-08-26 11:20:50.630 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:20:50.630 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:21:00.631 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:21:00
+[INFO ] 2019-08-26 11:21:00.631 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:21:00
+[INFO ] 2019-08-26 11:21:00.631 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:21:00.631 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:21:10.632 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:21:10
+[INFO ] 2019-08-26 11:21:10.632 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:21:10
+[INFO ] 2019-08-26 11:21:10.632 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:21:10.632 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:21:20.633 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:21:20
+[INFO ] 2019-08-26 11:21:20.633 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:21:20
+[INFO ] 2019-08-26 11:21:20.633 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:21:20.633 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:21:30.635 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:21:30
+[INFO ] 2019-08-26 11:21:30.635 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:21:30
+[INFO ] 2019-08-26 11:21:30.635 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:21:30.635 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 11:21:40.637 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 11:21:40
+[INFO ] 2019-08-26 11:21:40.637 [my-scheduled-task-pool-2] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 11:21:40
+[INFO ] 2019-08-26 11:21:40.637 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 11:21:40.637 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 15:01:26.866 [main] IbftJobsApplicationTests - Starting IbftJobsApplicationTests on DESKTOP-17D4O1S with PID 30076 (started by Admin in E:\Workspaces\ibft_jobs)
+[DEBUG] 2019-08-26 15:01:26.899 [main] IbftJobsApplicationTests - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+[INFO ] 2019-08-26 15:01:26.900 [main] IbftJobsApplicationTests - No active profile set, falling back to default profiles: default
+[INFO ] 2019-08-26 15:02:02.099 [main] IbftJobsApplicationTests - Started IbftJobsApplicationTests in 35.566 seconds (JVM running for 37.419)
+[INFO ] 2019-08-26 15:02:02.102 [my-scheduled-task-pool-1] NapasBatchReceive - Call receiving data function from NAPAS :: Execution Time - 15:02:02
+[INFO ] 2019-08-26 15:02:02.103 [my-scheduled-task-pool-1] NapasFileHandlerService - No file found /opt/napas_in/
+[INFO ] 2019-08-26 15:02:02.104 [my-scheduled-task-pool-1] NapasFileHandlerService - No files found!
+[INFO ] 2019-08-26 15:02:02.104 [my-scheduled-task-pool-1] NapasBatchSend - Call sending data function to NAPAS :: Execution Time - 15:02:02

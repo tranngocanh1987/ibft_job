@@ -3,7 +3,7 @@ Configuration:
   Properties:
     Property:
       name: APP_LOG_ROOT
-      value: E:/logs
+      value: logs
   appenders:
     Console:
       name: LogToConsole
@@ -12,8 +12,8 @@ Configuration:
 
     RollingFile:
       - name: LogToRollingFile
-        fileName: E:/logs/app.log
-        filePattern: "E:/logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
+        fileName: "logs/${date:yyyy}/${date:MM}/${date:dd}/ibft_jobs.log"
+        filePattern: "logs/$${date:yyyy-MM}/ibft_job-%d{yyyy-MM-dd}.log"
         PatternLayout:
           pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
         Policies:

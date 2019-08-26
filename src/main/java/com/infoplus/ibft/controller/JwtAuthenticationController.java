@@ -20,6 +20,7 @@ import com.infoplus.ibft.service.JwtUserDetailsService;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/ibft")
 public class JwtAuthenticationController {
 	@Autowired
 	private AuthenticationManager authenticationManager;

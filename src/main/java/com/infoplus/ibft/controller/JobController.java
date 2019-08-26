@@ -1,14 +1,11 @@
 package com.infoplus.ibft.controller;
 
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -17,12 +14,12 @@ import com.infoplus.ibft.model.JobModel;
 import com.infoplus.ibft.service.JobService;
 
 @RestController
+@RequestMapping("/ibft")
 public class JobController {
 	
 	@Autowired
 	JobService jobService;
 
-	private int totalPages = 1;
 	
 	@GetMapping({ "/hello" })
 	public String firstPage() {
@@ -70,25 +67,23 @@ public class JobController {
 		return modelAndView;
 	}
 		
-	private ModelAndView getListJob(String name, int currentPage) {
-		ModelAndView modelAndView = new ModelAndView(name);
-		
-		if(currentPage < 1 )
-			currentPage = 1;
-		else if( currentPage > 1 && currentPage > totalPages )
-			currentPage = totalPages;
-		
-		PageRequest pageable  = PageRequest.of(currentPage-1, 10);
-		Page<JobModel> lstJobs = jobService.getAllJobs(pageable);
-		
-		totalPages = lstJobs.getTotalPages();
-		
-		if(totalPages > 0) {
-			List<Integer> pageNumbers = IntStream.rangeClosed(1,totalPages).boxed().collect(Collectors.toList());
-			 modelAndView.addObject("pageNumbers", pageNumbers);
-		}
-		modelAndView.addObject("activeJobList", true);
-		modelAndView.addObject("jobList", lstJobs.getContent());
-		return modelAndView;
-	}
+	/*
+	 * private ModelAndView getListJob(String name, int currentPage) { ModelAndView
+	 * modelAndView = new ModelAndView(name);
+	 * 
+	 * if(currentPage < 1 ) currentPage = 1; else if( currentPage > 1 && currentPage
+	 * > totalPages ) currentPage = totalPages;
+	 * 
+	 * PageRequest pageable = PageRequest.of(currentPage-1, 10); Page<JobModel>
+	 * lstJobs = jobService.getAllJobs(pageable);
+	 * 
+	 * totalPages = lstJobs.getTotalPages();
+	 * 
+	 * if(totalPages > 0) { List<Integer> pageNumbers =
+	 * IntStream.rangeClosed(1,totalPages).boxed().collect(Collectors.toList());
+	 * modelAndView.addObject("pageNumbers", pageNumbers); }
+	 * modelAndView.addObject("activeJobList", true);
+	 * modelAndView.addObject("jobList", lstJobs.getContent()); return modelAndView;
+	 * }
+	 */
 }
